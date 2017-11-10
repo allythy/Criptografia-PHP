@@ -1,0 +1,21 @@
+$learquivo = fopen ("arquivo.txt","r"); // abertura do arquivo
+while (!feof ($learquivo)) // leitura do conteúdo do arquivo
+    {
+     $linha = fgets($learquivo,4096);
+    }
+
+fclose ($learquivo); // fechamento do arquivo
+
+$codificada   = base64_encode($linha); // encripta o conteúdo lido do arquivo
+$decodificada = base64_decode($codificada); // decripta o conteúdo lido do arquivo
+
+$learquivo2 = fopen ("arquivo.txt","w+"); //abre o arquivo novamente e apaga todo o seu conteúdo
+fwrite($learquivo2, $codificada); // escreve no arquivo a string criptografada
+fclose ($learquivo2); // fecha o arquivo
+echo 'Arquivo criptografado';
+
+// Este trecho está comentado, pois vai depender do parâmetro enviado pelo HTML, para identificar ser o comando será para encriptar ou decriptar o arquuivo
+//$learquivo3 = fopen ("arquivo.txt","w+"); //abre o arquivo novamente e apaga todo o seu conteúdo
+//fwrite($learquivo3, $decodificada); // escreve no arquivo a string criptografada
+//fclose ($learquivo3); //fecha o arquivo
+//echo 'Arquivo descriptografado';

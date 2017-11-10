@@ -1,0 +1,26 @@
+.btn {
+  border: solid 1px #26a69a;
+  background-color: transparent;
+}
+
+.parallax-container {
+  height: 700px;
+}
+
+.espaco {
+  letter-spacing: 20px;
+  text-transform: uppercase;
+}
+
+.parallax {
+  background-image: url(../img/debian.png);
+}
+
+.btn-large {
+  background-color: transparent;
+  border: solid 1px #26a69a;
+  margin-left: 100px;
+}
+html{
+  color: white;
+}
